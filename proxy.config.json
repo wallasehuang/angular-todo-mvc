@@ -1,0 +1,12 @@
+{
+    "/me": {
+        "target": {
+            "host": "jsonbin.org/jiaming0708",
+            "protocol": "https",
+            "port": 443
+        },
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
