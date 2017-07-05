@@ -3,23 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { TitleComponent } from './title/title.component';
-import { FooterComponent } from './footer/footer.component';
-import { FilterPipe } from './filter.pipe';
+import { TodoComponent } from './todo/todo.component';
+import { RouterModule } from '@angular/router';
+import { AppRouteModule } from './app-route.module';
+import { TodoModule } from './todo/todo.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent,
-    FooterComponent,
-    FilterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    TodoModule,
+    AppRouteModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
