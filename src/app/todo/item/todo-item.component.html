@@ -1,0 +1,7 @@
+        <div class="view">
+          <input class="toggle" type="checkbox" [checked]="item.done" (change)="changedStatus(item)">
+          <input class="toggle" type="checkbox" [(ngModel)]="item.done" (change)="changedStatus(item)">
+          <label>{{item.text | uppercase}}</label>
+          <button class="destroy" (click)="removeTodo(item)"></button>
+        </div>
+        <input class="edit" value="Rule the web">
