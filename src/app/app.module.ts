@@ -8,13 +8,11 @@ import { RouterModule } from '@angular/router';
 import { AppRouteModule } from './route/app-route.module';
 import { TodoModule } from './todo/todo.module';
 import { HomeComponent } from './home/home.component';
-import { TodoitemComponent } from './todoitem/todoitem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    TodoitemComponent,
   ],
   imports: [
     BrowserModule,

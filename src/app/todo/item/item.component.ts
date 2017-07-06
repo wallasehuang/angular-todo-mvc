@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from './../todo';
 
 @Component({
-  selector: 'app-item',
+  selector: 'todo-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
