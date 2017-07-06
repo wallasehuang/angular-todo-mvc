@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import { Todo } from './../todo';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -8,7 +10,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   @Input()
-  todos : any[];
+  todos : Todo[];
 
   @Output()
   clearCompleted = new EventEmitter();

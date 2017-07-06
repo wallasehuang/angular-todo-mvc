@@ -1,0 +1,5 @@
+<div class="view">
+  <input class="toggle" type="checkbox" [(ngModel)]="item.done" (change)="changed()">
+  <label>{{item.task | uppercase}}</label>
+  <button class="destroy" (click)="remove(item)"></button>
+</div>

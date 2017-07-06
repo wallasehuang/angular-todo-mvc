@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Todo } from './todo';
 import { DataService } from "app/todo/data.service";
 
 @Component({
@@ -9,7 +10,7 @@ import { DataService } from "app/todo/data.service";
 })
 export class TodoComponent implements OnInit{
 	inputHint = 'What needs to be done?';
-	todos: any[] = [];
+	todos: Todo[] = [];
 	todo = '';
 	filterType ='All';
 	toggleAll = false;	
@@ -26,7 +27,7 @@ export class TodoComponent implements OnInit{
 		console.log('into addTodo()');
 		let newTodos = [...this.todos];
 		newTodos.push({
-			text : this.todo,
+			task : this.todo,
 			done : false
 		});
 		this.dataSvc.saveTodos(newTodos).subscribe(data =>{
@@ -47,8 +48,9 @@ export class TodoComponent implements OnInit{
 	}
 
 	changedStatus(){
-		console.log('123',this.todos);
 		let newTodos = [...this.todos];
+        console.log("todos",this.todos);
+        console.log("newtodo",newTodos);
 		this.dataSvc.saveTodos(newTodos).subscribe(data=>{
 			this.todos = data;
 		});

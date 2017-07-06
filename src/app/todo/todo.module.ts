@@ -7,13 +7,15 @@ import { TitleComponent } from './title/title.component';
 import { FooterComponent } from './footer/footer.component';
 import { FilterPipe } from './filter.pipe';
 import { DataService } from './data.service';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   declarations: [
     TodoComponent,
     TitleComponent,
     FooterComponent,
-    FilterPipe
+    FilterPipe,
+    ItemComponent
   ],
   imports: [
     BrowserModule,

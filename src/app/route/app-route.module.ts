@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes} from '@angular/router';
-import { TodoModule } from '.././todo/todo.module';
 import { TodoComponent } from '.././todo/todo.component'
 import { HomeComponent } from "app/home/home.component";
 
@@ -14,8 +12,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,
-    TodoModule,
     RouterModule.forRoot(routes),
   ],
   exports:[RouterModule]
