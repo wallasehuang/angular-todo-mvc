@@ -5,12 +5,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { RouterModule } from '@angular/router';
-import { AppRouteModule } from './app-route.module';
+import { AppRouteModule } from './route/app-route.module';
 import { TodoModule } from './todo/todo.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
