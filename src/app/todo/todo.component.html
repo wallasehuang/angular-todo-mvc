@@ -13,7 +13,7 @@
       
       <li *ngFor="let item of todos | filter : filterType" [ngClass]="{'completed' : item.done}" (ngModelChange)="updateToggleAllState()">
          <todo-item [item]="item"
-            (changeStatus)="chageStatus()"
+            (changeStatus)="changedStatus()"
             (removeTodo)="removeTodo($event)"></todo-item>
         <input class="edit" value="Rule the web">
       </li>

@@ -26,10 +26,12 @@ export class TodoComponent implements OnInit{
 	addTodo() {
 		console.log('into addTodo()');
 		let newTodos = [...this.todos];
-		newTodos.push({
+		let new_todo: Todo = {
 			task : this.todo,
 			done : false
-		});
+		};
+		
+		newTodos.push(new_todo);
 		this.dataSvc.saveTodos(newTodos).subscribe(data =>{
 			this.todos = data;
 			this.todo = '';

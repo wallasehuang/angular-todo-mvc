@@ -25,6 +25,7 @@ export class ItemComponent implements OnInit {
 
   changed(){
     this.changeStatus.emit();
+    console.log('change','into');
   }
 
   remove(todo: Todo){

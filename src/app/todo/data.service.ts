@@ -3,6 +3,8 @@ import { Http, RequestOptions, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs';
 
+import { Todo } from './todo';
+
 @Injectable()
 export class DataService {
 
@@ -15,24 +17,24 @@ export class DataService {
 
   constructor(private http: Http) { }
 
-  getTodos(){
+  getTodos(): Observable<Todo[]>{
 		return this.http.get('https://jsonbin.org/jiaming0708/wallase', this.requestOptions).map(res =>{
       console.log(res.json());
 			return res.json();
 		}).catch(error => {
 			console.log(error);
-			return Observable.of<any[]>([]);
+			return Observable.of<Todo[]>([]);
 		});
 	}
 
-	saveTodos (newTodos: any[]){
+	saveTodos (newTodos: Todo[]){
 		return this.http.post('https://jsonbin.org/jiaming0708/wallase',newTodos,this.requestOptions).map(res =>{
       console.log('saveTodos');
       console.log(res.json());
 			return res.json();
 		}).catch(error => {
 			console.log(error);
-			return Observable.of<any[]>([]);
+			return Observable.of<Todo[]>([]);
 		});
 	}
 
